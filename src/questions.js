@@ -34,3 +34,12 @@ const engineerQuestion = [
     message: "Please provide your Github Profile URL",
   },
 ];
+
+// Intern additional question
+const internQuestion = [
+  {
+    name: "school",
+    type: "input",
+    message: "Please provide the name of the school you attended",
+  },
+];
