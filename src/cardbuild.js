@@ -109,3 +109,5 @@ const internCardBuild = `
 /******************************************/
 /* Main logic */
 /******************************************/
+// Exporting card building code
+export { managerCardBuild, engineerCardBuild, internCardBuild };

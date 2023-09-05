@@ -51,3 +51,5 @@ const pageBuild = `
 /******************************************/
 /* Main logic */
 /******************************************/
+// Exporting Page Building code
+export { pageBuild };
