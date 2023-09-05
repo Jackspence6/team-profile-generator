@@ -1,8 +1,15 @@
 /******************************************/
 /* External dependencies */
 /******************************************/
-// Importing Inquirer for command line prompts 
+// Importing Inquirer for command line prompts
 import inquirer from "inquirer";
+// Importing questions from questions.js
+const {
+  mainQuestions,
+  managerQuestion,
+  engineerQuestion,
+  internQuestion,
+} = require("./src/questions");
 /******************************************/
 /* Environment Variables and Constants */
 /******************************************/
