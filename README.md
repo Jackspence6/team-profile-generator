@@ -1,6 +1,6 @@
 # Team Profile Generator
 
-![badmath](https://img.shields.io/github/license/qkeddy/team-profile-generator)
+![badmath](https://img.shields.io/github/license/Jackspence6/team-profile-generator)
 
 ## Description
 
