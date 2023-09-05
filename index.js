@@ -1,7 +1,7 @@
 /******************************************/
 /* External dependencies */
 /******************************************/
-// Importing Inquirer for command line prompts
+// Importing Inquirer for command line prompts 
 import inquirer from "inquirer";
 /******************************************/
 /* Environment Variables and Constants */
