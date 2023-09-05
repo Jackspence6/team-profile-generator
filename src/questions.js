@@ -5,7 +5,11 @@ const mainQuestions = [
     type: "input",
     message: "Please Provide your Full Name and Surname",
   },
-  { name: "id", type: "number", message: "Please provide you ID number" },
+  {
+    name: "id",
+    type: "number",
+    message: "Please provide you Employee ID number",
+  },
   {
     name: "email",
     type: "input",
@@ -13,3 +17,11 @@ const mainQuestions = [
   },
 ];
 
+// manager additional question
+const managerQuestions = [
+  {
+    name: "phoneNumber",
+    type: "number",
+    message: "Please provide you're Phone Number",
+  },
+];
