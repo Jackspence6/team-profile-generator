@@ -46,8 +46,36 @@ import {
 /******************************************/
 /* Main Logic */
 /******************************************/
-// prompting users in the CLI
-inquirer
-  .prompt(mainQuestions)
-  .then((answers) => console.log({ answers }))
-  .catch((error) => console.error(error));
+function init() {
+  // prompting users in the CLI
+  inquirer
+    .prompt(mainQuestions)
+    .then((answers) => {
+      console.log({ answers });
+      // Asking additional question if employee is a Manager
+      if (answers.role === "Manager") {
+        inquirer
+          .prompt(managerQuestion)
+          .then((answers) => console.log(answers))
+          .catch((error) => console.error(error));
+      }
+      // Asking additional question if employee is an Engineer
+      else if (answers.role === "Engineer") {
+        inquirer
+          .prompt(engineerQuestion)
+          .then((answers) => console.log(answers))
+          .catch((error) => console.error(error));
+      }
+      // Asking additional question if employee is an Intern
+      else if (answers.role === "Intern") {
+        inquirer
+          .prompt(internQuestion)
+          .then((answers) => console.log(answers))
+          .catch((error) => console.error(error));
+      }
+    })
+    .catch((error) => console.error(error));
+}
+
+// Calling the init function to prompt users in the CLI
+init();
