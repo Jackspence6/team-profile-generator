@@ -17,11 +17,20 @@ const mainQuestions = [
   },
 ];
 
-// manager additional question
-const managerQuestions = [
+// Manager additional question
+const managerQuestion = [
   {
     name: "phoneNumber",
     type: "number",
-    message: "Please provide you're Phone Number",
+    message: "Please provide your Phone Number",
+  },
+];
+
+// Engineer additional question
+const engineerQuestion = [
+  {
+    name: "githubUsername",
+    type: "input",
+    message: "Please provide your Github Profile URL",
   },
 ];
