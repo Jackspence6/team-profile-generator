@@ -43,3 +43,11 @@ const internQuestion = [
     message: "Please provide the name of the school you attended",
   },
 ];
+
+// Exporting questions for use on different files
+module.exports = {
+  mainQuestions,
+  managerQuestion,
+  engineerQuestion,
+  internQuestion,
+};
