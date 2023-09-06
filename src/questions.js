@@ -20,11 +20,6 @@ const managerQuestions = [
     type: "number",
     message: "Please provide the Manager's Phone Number:",
   },
-  {
-    name: "addEmployee",
-    type: "confirm",
-    message: "Do you want to add an additional Employee to the Team?",
-  },
 ];
 
 // Employee Role question
@@ -59,11 +54,6 @@ const engineerQuestions = [
     type: "input",
     message: "Please provide the Engineer's Github Profile URL:",
   },
-  {
-    name: "addEmployee",
-    type: "confirm",
-    message: "Do you want to add an additional Employee to the Team?",
-  },
 ];
 
 // Intern questions
@@ -87,11 +77,6 @@ const internQuestions = [
     name: "school",
     type: "input",
     message: "Please provide the name of the school the Intern attended:",
-  },
-  {
-    name: "addEmployee",
-    type: "confirm",
-    message: "Do you want to add an additional Employee to the Team?",
   },
 ];
 
