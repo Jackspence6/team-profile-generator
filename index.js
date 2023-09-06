@@ -10,6 +10,14 @@ import {
   engineerQuestions,
   internQuestions,
 } from "./src/questions.js";
+// Importing cardBuild from cardBuild.js
+import {
+  managerCardBuild,
+  engineerCardBuild,
+  internCardBuild,
+} from "./src/cardbuild.js";
+// Importing pagebuild from pagebuild.js
+import { pageBuild } from "./src/pagebuild.js";
 /******************************************/
 /* Environment Variables and Constants */
 /******************************************/
