@@ -18,18 +18,36 @@ import {
 /******************************************/
 /* Function Declarations */
 /******************************************/
+// Function to ask if the user wants to add another employee
+function askToAddAnother() {
+  return inquirer
+    .prompt([
+      {
+        type: "confirm",
+        name: "addAnother",
+        message: "Would you like to add another employee?",
+      },
+    ])
+    .then((answer) => {
+      if (answer.addAnother) {
+        return addEmployee();
+      }
+    });
+}
+
 // Function to handle adding an employee
 function addEmployee() {
   return inquirer.prompt(employeeRoleQuestion).then((employeeRoleAnswer) => {
-    console.log(employeeRoleAnswer);
     if (employeeRoleAnswer.role === "Engineer") {
-      return inquirer
-        .prompt(engineerQuestions)
-        .then((engineerAnswers) => console.log(engineerAnswers));
+      return inquirer.prompt(engineerQuestions).then((engineerAnswers) => {
+        console.log(engineerAnswers);
+        return askToAddAnother();
+      });
     } else {
-      return inquirer
-        .prompt(internQuestions)
-        .then((internAnswers) => console.log(internAnswers));
+      return inquirer.prompt(internQuestions).then((internAnswers) => {
+        console.log(internAnswers);
+        return askToAddAnother();
+      });
     }
   });
 }
@@ -70,7 +88,11 @@ function init() {
         return addEmployee();
       }
     })
+    .then(() => {
+      return askToAddAnother();
+    })
     .catch((error) => console.error(error));
 }
+
 // Calling the init function to prompt users in the CLI
 init();
