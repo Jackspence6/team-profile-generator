@@ -6,10 +6,11 @@ import { error } from "console";
 import inquirer from "inquirer";
 // Importing questions from questions.js
 import {
-  mainQuestions,
-  managerQuestion,
-  engineerQuestion,
-  internQuestion,
+  managerQuestions,
+  additionalEmployeeQuestion,
+  employeeRoleQuestion,
+  engineerQuestions,
+  internQuestions,
 } from "./src/questions.js";
 /******************************************/
 /* Environment Variables and Constants */
