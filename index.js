@@ -50,7 +50,20 @@ function init() {
   // prompting users in the CLI for manager info
   inquirer
     .prompt(managerQuestions)
-    .then((answers) => console.log({ answers }))
+    .then((answers) => {
+      console.log(answers);
+      if (answers.addEmployee) {
+        return inquirer.prompt(employeeRoleQuestion);
+      } else return;
+    })
+    .then((employeeRoleAnswer) => {
+      console.log(employeeRoleAnswer);
+      if (employeeRoleAnswer.role === "Engineer") {
+        return inquirer.prompt(engineerQuestions);
+      } else {
+        return inquirer.prompt(internQuestions);
+      }
+    })
     .catch((error) => console.error(error));
 }
 // Calling the init function to prompt users in the CLI
