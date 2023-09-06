@@ -18,7 +18,21 @@ import {
 /******************************************/
 /* Function Declarations */
 /******************************************/
-
+// Function to handle adding an employee
+function addEmployee() {
+  return inquirer.prompt(employeeRoleQuestion).then((employeeRoleAnswer) => {
+    console.log(employeeRoleAnswer);
+    if (employeeRoleAnswer.role === "Engineer") {
+      return inquirer
+        .prompt(engineerQuestions)
+        .then((engineerAnswers) => console.log(engineerAnswers));
+    } else {
+      return inquirer
+        .prompt(internQuestions)
+        .then((internAnswers) => console.log(internAnswers));
+    }
+  });
+}
 /******************************************/
 /* Class Declarations */
 /******************************************/
@@ -46,22 +60,14 @@ import {
 /******************************************/
 /* Main Logic */
 /******************************************/
+// Initializing function
 function init() {
-  // prompting users in the CLI for manager info
   inquirer
     .prompt(managerQuestions)
     .then((answers) => {
       console.log(answers);
       if (answers.addEmployee) {
-        return inquirer.prompt(employeeRoleQuestion);
-      } else return;
-    })
-    .then((employeeRoleAnswer) => {
-      console.log(employeeRoleAnswer);
-      if (employeeRoleAnswer.role === "Engineer") {
-        return inquirer.prompt(engineerQuestions);
-      } else {
-        return inquirer.prompt(internQuestions);
+        return addEmployee();
       }
     })
     .catch((error) => console.error(error));
