@@ -20,6 +20,11 @@ const managerQuestions = [
     type: "number",
     message: "Please provide the Manager's Phone Number:",
   },
+  {
+    name: "addEmployee",
+    type: "confirm",
+    message: "Would you like to add an employee?",
+  },
 ];
 
 // Employee Role question

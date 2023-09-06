@@ -2,7 +2,6 @@
 /* External dependencies */
 /******************************************/
 // Importing Inquirer for command line prompts
-import { error } from "console";
 import inquirer from "inquirer";
 // Importing questions from questions.js
 import {
@@ -87,9 +86,6 @@ function init() {
       if (answers.addEmployee) {
         return addEmployee();
       }
-    })
-    .then(() => {
-      return askToAddAnother();
     })
     .catch((error) => console.error(error));
 }
