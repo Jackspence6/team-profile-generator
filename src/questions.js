@@ -20,14 +20,10 @@ const managerQuestions = [
     type: "number",
     message: "Please provide the Manager's Phone Number:",
   },
-];
-
-// Additional employee Question
-const additionalEmployeeQuestion = [
   {
     name: "addEmployee",
     type: "confirm",
-    message: "Do you want to add an additional Employee to the Team:",
+    message: "Do you want to add an additional Employee to the Team?",
   },
 ];
 
@@ -37,7 +33,7 @@ const employeeRoleQuestion = [
     name: "role",
     type: "list",
     message: "Please select the employee's position:",
-    choices: ["Manager", "Intern", "Engineer"],
+    choices: ["Intern", "Engineer"],
   },
 ];
 
@@ -63,6 +59,11 @@ const engineerQuestions = [
     type: "input",
     message: "Please provide the Engineer's Github Profile URL:",
   },
+  {
+    name: "addEmployee",
+    type: "confirm",
+    message: "Do you want to add an additional Employee to the Team?",
+  },
 ];
 
 // Intern questions
@@ -87,12 +88,16 @@ const internQuestions = [
     type: "input",
     message: "Please provide the name of the school the Intern attended:",
   },
+  {
+    name: "addEmployee",
+    type: "confirm",
+    message: "Do you want to add an additional Employee to the Team?",
+  },
 ];
 
 // Exporting questions for use on different files
 export {
   managerQuestions,
-  additionalEmployeeQuestion,
   employeeRoleQuestion,
   engineerQuestions,
   internQuestions,
