@@ -18,6 +18,10 @@ import {
 } from "./src/cardbuild.js";
 // Importing pagebuild from pagebuild.js
 import { pageBuild } from "./src/pagebuild.js";
+// Importing employee classes
+import { Manager } from "./lib/Manager.js";
+import { Engineer } from "./lib/Engineer.js";
+import { Intern } from "./lib/Intern.js";
 /******************************************/
 /* Environment Variables and Constants */
 /******************************************/
@@ -38,7 +42,7 @@ function askToAddAnother() {
     .then((answer) => {
       if (answer.addAnother) {
         return addEmployee();
-      }
+      } else console.log("Final list of employees:", employees);
     });
 }
 
@@ -100,6 +104,9 @@ function init() {
       if (answers.addEmployee) {
         return addEmployee();
       }
+    })
+    .then(() => {
+      console.log("Final list of employees:", employees);
     })
     .catch((error) => console.error(error));
 }
