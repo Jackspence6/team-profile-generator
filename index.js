@@ -21,7 +21,7 @@ import { pageBuild } from "./src/pagebuild.js";
 /******************************************/
 /* Environment Variables and Constants */
 /******************************************/
-
+let employees = [];
 /******************************************/
 /* Function Declarations */
 /******************************************/
@@ -48,11 +48,15 @@ function addEmployee() {
     if (employeeRoleAnswer.role === "Engineer") {
       return inquirer.prompt(engineerQuestions).then((engineerAnswers) => {
         console.log(engineerAnswers);
+        const engineer = new Engineer(engineerAnswers);
+        employees.push(engineer);
         return askToAddAnother();
       });
     } else {
       return inquirer.prompt(internQuestions).then((internAnswers) => {
         console.log(internAnswers);
+        const intern = new Intern(internAnswers);
+        employees.push(intern);
         return askToAddAnother();
       });
     }
