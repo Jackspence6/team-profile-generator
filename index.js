@@ -95,6 +95,8 @@ function init() {
     .prompt(managerQuestions)
     .then((answers) => {
       console.log(answers);
+      const manager = new Manager(answers);
+      employees.push(manager);
       if (answers.addEmployee) {
         return addEmployee();
       }
