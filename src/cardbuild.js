@@ -7,7 +7,7 @@
 /******************************************/
 // Card Building code for employee cards
 // Manager Card
-const managerCardBuild = `
+const managerCardBuild = (manager) => `
     <!-- Manager Card  -->
     <div class="card m-0 p-0 rounded" style="width: 18rem">
       <!-- Div to hold both h5 and h6 with the same blue background -->
@@ -15,21 +15,21 @@ const managerCardBuild = `
         class="bg-primary text-white m-0 p-2"
         style="border-bottom: 5px solid black"
       >
-        <h5 class="mb-0 text-center">Employee Name</h5>
-        <h6 class="mb-0 text-center">Employee Title</h6>
+        <h5 class="mb-0 text-center">${manager.getName()}</h5>
+        <h6 class="mb-0 text-center">${manager.getRole()}</h6>
       </div>
       <!-- Separate card to hold the list items -->
       <ul class="list-group list-group-flush m-0 p-4 border border-black">
         <li class="list-group-item border border-secondary-subtle rounded-top">
-          ID:
+          ID: ${manager.getId()}
         </li>
         <li class="list-group-item border border-secondary-subtle">
-          Email: <a href="mailto: "></a>
+          Email: <a href="mailto:${manager.getEmail()}"></a>
         </li>
         <li
           class="list-group-item border border-secondary-subtle rounded-bottom"
         >
-          Office Number:
+          Office Number: ${manager.getOfficeNumber()}
         </li>
       </ul>
     </div>

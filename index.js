@@ -26,6 +26,7 @@ import { Intern } from "./lib/Intern.js";
 /* Environment Variables and Constants */
 /******************************************/
 let employees = [];
+let HtmlCards = "";
 /******************************************/
 /* Function Declarations */
 /******************************************/
@@ -101,12 +102,15 @@ function init() {
       console.log(answers);
       const manager = new Manager(answers);
       employees.push(manager);
+      const managerCard = managerCardBuild(manager);
+      HtmlCards += managerCard;
       if (answers.addEmployee) {
         return addEmployee();
       }
     })
     .then(() => {
       console.log("Final list of employees:", employees);
+      console.log(HtmlCards);
     })
     .catch((error) => console.error(error));
 }
