@@ -29,7 +29,7 @@ const managerCardBuild = (manager) => `
         <li
           class="list-group-item border border-secondary-subtle rounded-bottom"
         >
-          Office Number: ${manager.getOfficeNumber()}
+          Office Number:${manager.getOfficeNumber()}
         </li>
       </ul>
     </div>

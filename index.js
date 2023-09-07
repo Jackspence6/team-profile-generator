@@ -100,7 +100,12 @@ function init() {
     .prompt(managerQuestions)
     .then((answers) => {
       console.log(answers);
-      const manager = new Manager(answers);
+      const manager = new Manager(
+        answers.name,
+        answers.id,
+        answers.email,
+        answers.phoneNumber
+      );
       employees.push(manager);
       const managerCard = managerCardBuild(manager);
       HtmlCards += managerCard;
