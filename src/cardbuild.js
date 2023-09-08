@@ -21,15 +21,15 @@ const managerCardBuild = (manager) => `
       <!-- Separate card to hold the list items -->
       <ul class="list-group list-group-flush m-0 p-4 border border-black">
         <li class="list-group-item border border-secondary-subtle rounded-top">
-          ID: ${manager.getId()}
+          ID:  ${manager.getId()}
         </li>
         <li class="list-group-item border border-secondary-subtle">
-          Email: <a href="mailto:${manager.getEmail()}"></a>
+          Email:  <a href="mailto:${manager.getEmail()}">${manager.getName()}</a>
         </li>
         <li
           class="list-group-item border border-secondary-subtle rounded-bottom"
         >
-          Office Number:${manager.getOfficeNumber()}
+          Office Number:  ${manager.getOfficeNumber()}
         </li>
       </ul>
     </div>
