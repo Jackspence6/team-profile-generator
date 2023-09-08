@@ -57,7 +57,7 @@ const engineerQuestions = [
   {
     name: "githubUsername",
     type: "input",
-    message: "Please provide the Engineer's Github Profile URL:",
+    message: "Please provide the Engineer's Github Name:",
   },
 ];
 

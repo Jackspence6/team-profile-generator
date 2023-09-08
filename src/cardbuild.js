@@ -35,7 +35,7 @@ const managerCardBuild = (manager) => `
     </div>
 `;
 // Engineer Card
-const engineerCardBuild = `
+const engineerCardBuild = (engineer) => `
     <!-- Engineer Card  -->
     <div class="card m-0 p-0 rounded" style="width: 18rem">
       <!-- Div to hold both h5 and h6 with the same blue background -->
@@ -43,21 +43,23 @@ const engineerCardBuild = `
         class="bg-primary text-white m-0 p-2"
         style="border-bottom: 5px solid black"
       >
-        <h5 class="mb-0 text-center">Employee Name</h5>
-        <h6 class="mb-0 text-center">Employee Title</h6>
+        <h5 class="mb-0 text-center">${engineer.getName()}</h5>
+        <h6 class="mb-0 text-center">${engineer.getRole()}</h6>
       </div>
       <!-- Separate card to hold the list items -->
       <ul class="list-group list-group-flush m-0 p-4 border border-black">
         <li class="list-group-item border border-secondary-subtle rounded-top">
-          ID:
+          ID:  ${engineer.getId()}
         </li>
         <li class="list-group-item border border-secondary-subtle">
-          Email: <a href="mailto: "></a>
+          Email:  <a href="mailto:${engineer.getEmail()}"></a>
         </li>
         <li
           class="list-group-item border border-secondary-subtle rounded-bottom"
         >
-          Github: <a href="https://github.com/ " target="_blank"></a>
+          Github:  <a href="https://github.com/${
+            engineer.getGithub
+          }" target="_blank"></a>
         </li>
       </ul>
     </div>
