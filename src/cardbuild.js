@@ -16,7 +16,9 @@ const managerCardBuild = (manager) => `
         style="border-bottom: 5px solid black"
       >
         <h5 class="mb-0 text-center">${manager.getName()}</h5>
-        <h6 class="mb-0 text-center">${manager.getRole()}</h6>
+        <h6 class="mb-0 text-center"> <span class="material-symbols-outlined">
+          coffee
+          </span> ${manager.getRole()}</h6>
       </div>
       <!-- Separate card to hold the list items -->
       <ul class="list-group list-group-flush m-0 p-4 border border-black">
