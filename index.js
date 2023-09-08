@@ -67,8 +67,15 @@ function addEmployee() {
     } else {
       return inquirer.prompt(internQuestions).then((internAnswers) => {
         console.log(internAnswers);
-        const intern = new Intern(internAnswers);
+        const intern = new Intern(
+          internAnswers.name,
+          internAnswers.id,
+          internAnswers.email,
+          internAnswers.school
+        );
         employees.push(intern);
+        const internCard = internCardBuild(intern);
+        HtmlCards += internCard;
         return askToAddAnother();
       });
     }
