@@ -74,7 +74,9 @@ const internCardBuild = (intern) => `
         style="border-bottom: 5px solid black"
       >
         <h5 class="mb-0 text-center">${intern.getName()}</h5>
-        <h6 class="mb-0 text-center">${intern.getRole()}</h6>
+        <h6 class="mb-0 text-center"> <span class="material-symbols-outlined">
+          school
+          </span> ${intern.getRole()}</h6>
       </div>
       <!-- Separate card to hold the list items -->
       <ul class="list-group list-group-flush m-0 p-4 border border-black">
