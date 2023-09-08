@@ -130,9 +130,15 @@ function init() {
     .then(() => {
       console.log("Final list of employees:", employees);
       console.log(HtmlCards);
+      // Building Html Page with cards inside
+      const page = pageBuild(HtmlCards);
+      // Logging the final Html Page Code to the console
+      console.log(page);
     })
     .catch((error) => console.error(error));
 }
 
 // Calling the init function to prompt users in the CLI
 init();
+
+export { HtmlCards };

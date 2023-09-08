@@ -1,12 +1,12 @@
 /******************************************/
 /* External dependencies */
 /******************************************/
-
+import { HtmlCards } from "../index.js";
 /******************************************/
 /* Global variables and constants */
 /******************************************/
 // Adding html code for page to constant
-const pageBuild = `
+const pageBuild = (HtmlCards) => `
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,6 +28,7 @@ const pageBuild = `
     </header>
     <div class="container mt-4">
       <div class="row row-cols-1 row-cols-md-3 g-4" id="card-container">
+      ${HtmlCards}
       </div>
     </div>
   </body>
