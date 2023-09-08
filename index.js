@@ -53,8 +53,15 @@ function addEmployee() {
     if (employeeRoleAnswer.role === "Engineer") {
       return inquirer.prompt(engineerQuestions).then((engineerAnswers) => {
         console.log(engineerAnswers);
-        const engineer = new Engineer(engineerAnswers);
+        const engineer = new Engineer(
+          engineerAnswers.name,
+          engineerAnswers.id,
+          engineerAnswers.email,
+          engineerAnswers.githubUsername
+        );
         employees.push(engineer);
+        const engineerCard = engineerCardBuild(engineer);
+        HtmlCards += engineerCard;
         return askToAddAnother();
       });
     } else {
