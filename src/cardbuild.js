@@ -9,6 +9,7 @@
 // Manager Card
 const managerCardBuild = (manager) => `
     <!-- Manager Card  -->
+    <div class="col">
     <div class="card m-0 p-0 rounded" style="width: 18rem">
       <!-- Div to hold both h5 and h6 with the same blue background -->
       <div
@@ -35,10 +36,12 @@ const managerCardBuild = (manager) => `
         </li>
       </ul>
     </div>
+    </div>
 `;
 // Engineer Card
 const engineerCardBuild = (engineer) => `
     <!-- Engineer Card  -->
+    <div class="col">
     <div class="card m-0 p-0 rounded" style="width: 18rem">
       <!-- Div to hold both h5 and h6 with the same blue background -->
       <div
@@ -65,10 +68,12 @@ const engineerCardBuild = (engineer) => `
         </li>
       </ul>
     </div>
+    </div>
 `;
 // Intern Card
 const internCardBuild = (intern) => `
     <!-- Intern Card  -->
+    <div class="col">
     <div class="card m-0 p-0 rounded" style="width: 18rem">
       <!-- Div to hold both h5 and h6 with the same blue background -->
       <div
@@ -94,6 +99,7 @@ const internCardBuild = (intern) => `
           School:  ${intern.getSchool()}
         </li>
       </ul>
+    </div>
     </div>
 `;
 /******************************************/

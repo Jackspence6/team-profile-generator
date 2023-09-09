@@ -31,6 +31,18 @@ const pageBuild = (HtmlCards) => `
       ${HtmlCards}
       </div>
     </div>
+      <style>
+      .container {
+        display: flex;
+        justify-content: center;
+      }
+      #card-container {
+        margin: 2rem;
+      }
+      .card {
+        height: 100%;
+      }
+    </style>
   </body>
 </html>
 `;
