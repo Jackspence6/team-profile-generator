@@ -59,7 +59,7 @@ const engineerCardBuild = (engineer) => `
           ID:  ${engineer.getId()}
         </li>
         <li class="list-group-item border border-secondary-subtle">
-          Email:  <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
+          Email:  <a href="mailto:${engineer.getEmail()}">${engineer.getName()}</a>
         </li>
         <li
           class="list-group-item border border-secondary-subtle rounded-bottom"
@@ -91,7 +91,7 @@ const internCardBuild = (intern) => `
           ID:  ${intern.getId()}
         </li>
         <li class="list-group-item border border-secondary-subtle">
-          Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a>
+          Email: <a href="mailto:${intern.getEmail()}">${intern.getName()}</a>
         </li>
         <li
           class="list-group-item border border-secondary-subtle rounded-bottom"
