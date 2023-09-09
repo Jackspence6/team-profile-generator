@@ -3,6 +3,8 @@
 /******************************************/
 // Importing Inquirer for command line prompts
 import inquirer from "inquirer";
+// Importing fs for file writing
+import fs from "fs";
 // Importing questions from questions.js
 import {
   managerQuestions,
@@ -22,6 +24,7 @@ import { pageBuild } from "./src/pagebuild.js";
 import { Manager } from "./lib/Manager.js";
 import { Engineer } from "./lib/Engineer.js";
 import { Intern } from "./lib/Intern.js";
+import { error } from "console";
 /******************************************/
 /* Environment Variables and Constants */
 /******************************************/
@@ -81,6 +84,16 @@ function addEmployee() {
     }
   });
 }
+
+// Function to write file Async
+function writeFileAsync(path, data) {
+  return new Promise((resolve, reject) => {
+    fs.writeFile(path, data, (error) => {
+      if (error) reject(error);
+      else resolve();
+    });
+  });
+}
 /******************************************/
 /* Class Declarations */
 /******************************************/
@@ -134,6 +147,11 @@ function init() {
       const page = pageBuild(HtmlCards);
       // Logging the final Html Page Code to the console
       console.log(page);
+      writeFileAsync("./dist/myTeam.html", page)
+        .then(() => console.log("File Written Successfully"))
+        .catch((error) =>
+          console.error("There was an error writing the file:", error)
+        );
     })
     .catch((error) => console.error(error));
 }
