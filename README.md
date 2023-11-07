@@ -55,6 +55,6 @@ npm run test
 
 ## How to Contribute
 
-If you would like to contribute to this project. Please email me at jackspence123456@gmail.com. If you would like to contribute to future projects, please follow me at [Jackspence6](https://github.com/Jackspence6).
+If you would like to contribute to this project. Please email me at jackspence.dev@gmail.com. If you would like to contribute to future projects, please follow me at [Jackspence6](https://github.com/Jackspence6).
 
 It is requested that all contributors adhere to the standards outlined in the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
